@@ -920,99 +920,99 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 max-w-6xl mx-auto items-start">
             {/* Left side selectors: Stack of 4 category tabs */}
-            <div className="lg:col-span-4 space-y-4">
+            <div className="lg:col-span-4 flex flex-row lg:flex-col gap-3 lg:gap-4 overflow-x-auto lg:overflow-x-visible pb-4 lg:pb-0 scrollbar-hide snap-x snap-mandatory -mx-4 px-4 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0">
               {/* Category 1: Conditions */}
               <button
                 onClick={() => setActiveTab('conditions')}
-                className={`w-full text-left p-5 rounded-2xl border transition-all duration-300 flex items-center space-x-4 ${
+                className={`flex-none snap-start w-[210px] sm:w-[240px] lg:w-full text-left p-3.5 sm:p-4 lg:p-5 rounded-2xl border transition-all duration-300 flex items-center space-x-3 lg:space-x-4 ${
                   activeTab === 'conditions'
-                    ? 'bg-white border-teal-600 shadow-lg shadow-teal-700/5 translate-x-1'
+                    ? 'bg-white border-teal-600 shadow-lg shadow-teal-700/5 lg:translate-x-1'
                     : 'bg-stone-50/50 border-stone-200 hover:bg-white hover:border-stone-300'
                 }`}
               >
-                <div className={`h-11 w-11 rounded-xl flex items-center justify-center transition-colors ${
+                <div className={`h-9 w-9 lg:h-11 lg:w-11 rounded-xl flex items-center justify-center shrink-0 transition-colors ${
                   activeTab === 'conditions' ? 'bg-teal-700 text-white' : 'bg-stone-100 text-stone-600'
                 }`}>
-                  <Stethoscope className="h-5.5 w-5.5" />
+                  <Stethoscope className="h-4.5 w-4.5 lg:h-5.5 lg:w-5.5" />
                 </div>
-                <div>
-                  <h4 className="font-extrabold text-stone-900 text-sm uppercase">Conditions We Treat</h4>
-                  <p className="text-stone-450 text-xs mt-0.5">Spine, bone, and joint disorders.</p>
+                <div className="min-w-0">
+                  <h4 className="font-extrabold text-stone-900 text-xs lg:text-sm uppercase truncate">Conditions We Treat</h4>
+                  <p className="text-stone-450 text-[10px] lg:text-xs mt-0.5 hidden lg:block truncate">Spine, bone, and joint disorders.</p>
                 </div>
               </button>
 
               {/* Category 2: Symptoms */}
               <button
                 onClick={() => setActiveTab('symptoms')}
-                className={`w-full text-left p-5 rounded-2xl border transition-all duration-300 flex items-center space-x-4 ${
+                className={`flex-none snap-start w-[210px] sm:w-[240px] lg:w-full text-left p-3.5 sm:p-4 lg:p-5 rounded-2xl border transition-all duration-300 flex items-center space-x-3 lg:space-x-4 ${
                   activeTab === 'symptoms'
-                    ? 'bg-white border-teal-600 shadow-lg shadow-teal-700/5 translate-x-1'
+                    ? 'bg-white border-teal-600 shadow-lg shadow-teal-700/5 lg:translate-x-1'
                     : 'bg-stone-50/50 border-stone-200 hover:bg-white hover:border-stone-300'
                 }`}
               >
-                <div className={`h-11 w-11 rounded-xl flex items-center justify-center transition-colors ${
+                <div className={`h-9 w-9 lg:h-11 lg:w-11 rounded-xl flex items-center justify-center shrink-0 transition-colors ${
                   activeTab === 'symptoms' ? 'bg-teal-700 text-white' : 'bg-stone-100 text-stone-600'
                 }`}>
-                  <Activity className="h-5.5 w-5.5" />
+                  <Activity className="h-4.5 w-4.5 lg:h-5.5 lg:w-5.5" />
                 </div>
-                <div>
-                  <h4 className="font-extrabold text-stone-900 text-sm uppercase">Symptoms We Relieve</h4>
-                  <p className="text-stone-450 text-xs mt-0.5">Common pain and mobility limit points.</p>
+                <div className="min-w-0">
+                  <h4 className="font-extrabold text-stone-900 text-xs lg:text-sm uppercase truncate">Symptoms We Relieve</h4>
+                  <p className="text-stone-450 text-[10px] lg:text-xs mt-0.5 hidden lg:block truncate">Common pain and mobility limit points.</p>
                 </div>
               </button>
 
               {/* Category 3: Therapies */}
               <button
                 onClick={() => setActiveTab('therapies')}
-                className={`w-full text-left p-5 rounded-2xl border transition-all duration-300 flex items-center space-x-4 ${
+                className={`flex-none snap-start w-[210px] sm:w-[240px] lg:w-full text-left p-3.5 sm:p-4 lg:p-5 rounded-2xl border transition-all duration-300 flex items-center space-x-3 lg:space-x-4 ${
                   activeTab === 'therapies'
-                    ? 'bg-white border-teal-600 shadow-lg shadow-teal-700/5 translate-x-1'
+                    ? 'bg-white border-teal-600 shadow-lg shadow-teal-700/5 lg:translate-x-1'
                     : 'bg-stone-50/50 border-stone-200 hover:bg-white hover:border-stone-300'
                 }`}
               >
-                <div className={`h-11 w-11 rounded-xl flex items-center justify-center transition-colors ${
+                <div className={`h-9 w-9 lg:h-11 lg:w-11 rounded-xl flex items-center justify-center shrink-0 transition-colors ${
                   activeTab === 'therapies' ? 'bg-teal-700 text-white' : 'bg-stone-100 text-stone-600'
                 }`}>
-                  <Award className="h-5.5 w-5.5" />
+                  <Award className="h-4.5 w-4.5 lg:h-5.5 lg:w-5.5" />
                 </div>
-                <div>
-                  <h4 className="font-extrabold text-stone-900 text-sm uppercase">Therapies Offered</h4>
-                  <p className="text-stone-450 text-xs mt-0.5">High-end medical recovery modalities.</p>
+                <div className="min-w-0">
+                  <h4 className="font-extrabold text-stone-900 text-xs lg:text-sm uppercase truncate">Therapies Offered</h4>
+                  <p className="text-stone-450 text-[10px] lg:text-xs mt-0.5 hidden lg:block truncate">High-end medical recovery modalities.</p>
                 </div>
               </button>
 
               {/* Category 4: Services */}
               <button
                 onClick={() => setActiveTab('services')}
-                className={`w-full text-left p-5 rounded-2xl border transition-all duration-300 flex items-center space-x-4 ${
+                className={`flex-none snap-start w-[210px] sm:w-[240px] lg:w-full text-left p-3.5 sm:p-4 lg:p-5 rounded-2xl border transition-all duration-300 flex items-center space-x-3 lg:space-x-4 ${
                   activeTab === 'services'
-                    ? 'bg-white border-teal-600 shadow-lg shadow-teal-700/5 translate-x-1'
+                    ? 'bg-white border-teal-600 shadow-lg shadow-teal-700/5 lg:translate-x-1'
                     : 'bg-stone-50/50 border-stone-200 hover:bg-white hover:border-stone-300'
                 }`}
               >
-                <div className={`h-11 w-11 rounded-xl flex items-center justify-center transition-colors ${
+                <div className={`h-9 w-9 lg:h-11 lg:w-11 rounded-xl flex items-center justify-center shrink-0 transition-colors ${
                   activeTab === 'services' ? 'bg-teal-700 text-white' : 'bg-stone-100 text-stone-600'
                 }`}>
-                  <UserCheck className="h-5.5 w-5.5" />
+                  <UserCheck className="h-4.5 w-4.5 lg:h-5.5 lg:w-5.5" />
                 </div>
-                <div>
-                  <h4 className="font-extrabold text-stone-900 text-sm uppercase">Services Offered</h4>
-                  <p className="text-stone-450 text-xs mt-0.5">Clinical, home, and post-op care programs.</p>
+                <div className="min-w-0">
+                  <h4 className="font-extrabold text-stone-900 text-xs lg:text-sm uppercase truncate">Services Offered</h4>
+                  <p className="text-stone-450 text-[10px] lg:text-xs mt-0.5 hidden lg:block truncate">Clinical, home, and post-op care programs.</p>
                 </div>
               </button>
             </div>
 
             {/* Right side Display Panel: Flex wrap grid of badges (No scrollbars) */}
-            <div className="lg:col-span-8 bg-white rounded-3xl border border-stone-200 shadow-xl p-8 lg:p-10 min-h-[360px] flex flex-col justify-between">
+            <div className="lg:col-span-8 w-full bg-white rounded-3xl border border-stone-200 shadow-xl p-5 sm:p-8 lg:p-10 min-h-[320px] sm:min-h-[360px] flex flex-col justify-between">
               <div>
-                <div className="flex items-center justify-between border-b border-stone-100 pb-5 mb-6">
-                  <h3 className="text-lg font-black text-stone-900 uppercase tracking-tight">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-stone-100 pb-4 sm:pb-5 mb-6 gap-3">
+                  <h3 className="text-base sm:text-lg font-black text-stone-900 uppercase tracking-tight min-w-0">
                     {activeTab === 'conditions' && 'Orthopedic Conditions We Treat'}
                     {activeTab === 'symptoms' && 'Pain & Symptoms We Relieve'}
                     {activeTab === 'therapies' && 'Advanced Therapies We Offer'}
                     {activeTab === 'services' && 'Clinical & Home Rehab Services'}
                   </h3>
-                  <span className="bg-teal-50 border border-teal-500/10 text-teal-750 text-xs font-bold px-3 py-1 rounded-full">
+                  <span className="self-start sm:self-auto bg-teal-50 border border-teal-500/10 text-teal-750 text-xs font-bold px-3 py-1 rounded-full shrink-0">
                     {activeTab === 'conditions' && `${CONDITIONS.length} Items`}
                     {activeTab === 'symptoms' && `${SYMPTOMS.length} Items`}
                     {activeTab === 'therapies' && `${THERAPIES.length} Items`}
@@ -1021,11 +1021,11 @@ export default function HomePage() {
                 </div>
 
                 {/* Tags Board */}
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-2.5 sm:gap-3">
                   {activeTab === 'conditions' && CONDITIONS.map((item, idx) => (
                     <div 
                       key={idx} 
-                      className="flex items-center space-x-2.5 px-4 py-2.5 rounded-full bg-stone-50 border border-stone-200 text-stone-700 hover:bg-teal-700 hover:text-white hover:border-teal-700 transition-all duration-300 transform hover:-translate-y-0.5 cursor-default group"
+                      className="flex items-center space-x-2 sm:space-x-2.5 px-3 py-2 sm:px-4 sm:py-2.5 rounded-full bg-stone-50 border border-stone-200 text-stone-700 hover:bg-teal-700 hover:text-white hover:border-teal-700 transition-all duration-300 transform hover:-translate-y-0.5 cursor-default group"
                     >
                       <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-teal-650 text-white group-hover:bg-white group-hover:text-teal-700 transition-colors">
                         <svg viewBox="0 0 24 24" className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round">
@@ -1039,7 +1039,7 @@ export default function HomePage() {
                   {activeTab === 'symptoms' && SYMPTOMS.map((item, idx) => (
                     <div 
                       key={idx} 
-                      className="flex items-center space-x-2.5 px-4 py-2.5 rounded-full bg-stone-50 border border-stone-200 text-stone-700 hover:bg-teal-700 hover:text-white hover:border-teal-700 transition-all duration-300 transform hover:-translate-y-0.5 cursor-default group"
+                      className="flex items-center space-x-2 sm:space-x-2.5 px-3 py-2 sm:px-4 sm:py-2.5 rounded-full bg-stone-50 border border-stone-200 text-stone-700 hover:bg-teal-700 hover:text-white hover:border-teal-700 transition-all duration-300 transform hover:-translate-y-0.5 cursor-default group"
                     >
                       <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-teal-650 text-white group-hover:bg-white group-hover:text-teal-700 transition-colors">
                         <svg viewBox="0 0 24 24" className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round">
@@ -1053,7 +1053,7 @@ export default function HomePage() {
                   {activeTab === 'therapies' && THERAPIES.map((item, idx) => (
                     <div 
                       key={idx} 
-                      className="flex items-center space-x-2.5 px-4 py-2.5 rounded-full bg-stone-50 border border-stone-200 text-stone-700 hover:bg-teal-700 hover:text-white hover:border-teal-700 transition-all duration-300 transform hover:-translate-y-0.5 cursor-default group"
+                      className="flex items-center space-x-2 sm:space-x-2.5 px-3 py-2 sm:px-4 sm:py-2.5 rounded-full bg-stone-50 border border-stone-200 text-stone-700 hover:bg-teal-700 hover:text-white hover:border-teal-700 transition-all duration-300 transform hover:-translate-y-0.5 cursor-default group"
                     >
                       <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-teal-650 text-white group-hover:bg-white group-hover:text-teal-700 transition-colors">
                         <svg viewBox="0 0 24 24" className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round">
@@ -1067,7 +1067,7 @@ export default function HomePage() {
                   {activeTab === 'services' && SERVICES.map((item, idx) => (
                     <div 
                       key={idx} 
-                      className="flex items-center space-x-2.5 px-4 py-2.5 rounded-full bg-stone-50 border border-stone-200 text-stone-700 hover:bg-teal-700 hover:text-white hover:border-teal-700 transition-all duration-300 transform hover:-translate-y-0.5 cursor-default group"
+                      className="flex items-center space-x-2 sm:space-x-2.5 px-3 py-2 sm:px-4 sm:py-2.5 rounded-full bg-stone-50 border border-stone-200 text-stone-700 hover:bg-teal-700 hover:text-white hover:border-teal-700 transition-all duration-300 transform hover:-translate-y-0.5 cursor-default group"
                     >
                       <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-teal-650 text-white group-hover:bg-white group-hover:text-teal-700 transition-colors">
                         <svg viewBox="0 0 24 24" className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round">
@@ -1081,13 +1081,13 @@ export default function HomePage() {
               </div>
 
               {/* Consultation Link */}
-              <div className="pt-8 mt-8 border-t border-stone-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="pt-6 sm:pt-8 mt-6 sm:mt-8 border-t border-stone-100 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <p className="text-xs text-stone-500 text-center sm:text-left">
                   Schedule a precision evaluation session for post-surgery or pain recovery.
                 </p>
                 <Link
                   href="#appointment"
-                  className="flex items-center justify-center space-x-1.5 px-6 py-3 rounded-xl bg-teal-700 hover:bg-teal-800 text-white font-bold text-xs uppercase tracking-wider shadow-md hover:shadow-teal-700/20 transition-all duration-300"
+                  className="w-full sm:w-auto flex items-center justify-center space-x-1.5 px-6 py-3 rounded-xl bg-teal-700 hover:bg-teal-800 text-white font-bold text-xs uppercase tracking-wider shadow-md hover:shadow-teal-700/20 transition-all duration-300"
                 >
                   <span>Request Assessment</span>
                   <ArrowRight className="h-3.5 w-3.5" />
